@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_include"
+            app:startDestination="@id/includeAFragment">
+
+    <fragment android:id="@+id/includeAFragment" android:name="com.app.bottomtabsnavigaion.ui.IncludeAFragment"
+              android:label="Included A" tools:layout="@layout/fragment_include_a">
+        <action android:id="@+id/action_includeAFragment_to_includeBFragment" app:destination="@id/includeBFragment"/>
+        <argument android:name="auth" app:argType="boolean" android:defaultValue="true"/>
+    </fragment>
+    <fragment android:id="@+id/includeBFragment" android:name="com.app.bottomtabsnavigaion.ui.IncludeBFragment"
+              android:label="Included B" tools:layout="@layout/fragment_include_b">
+        <action android:id="@+id/action_includeBFragment_to_includeCFragment" app:destination="@id/includeCFragment"/>
+        <argument android:name="auth" app:argType="boolean" android:defaultValue="true"/>
+    </fragment>
+    <fragment android:id="@+id/includeCFragment" android:name="com.app.bottomtabsnavigaion.ui.IncludeCFragment"
+              android:label="Included C" tools:layout="@layout/fragment_include_c">
+        <argument android:name="auth" app:argType="boolean" android:defaultValue="true"/>
+    </fragment>
+</navigation>

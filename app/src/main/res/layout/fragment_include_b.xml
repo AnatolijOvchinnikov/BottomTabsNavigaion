@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".ui.IncludeBFragment">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="IncludeBFragment"/>
+
+    <Button
+            android:id="@+id/includeBButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to C included fragment"
+            android:gravity="center"
+            android:layout_gravity="bottom"/>
+
+</FrameLayout>

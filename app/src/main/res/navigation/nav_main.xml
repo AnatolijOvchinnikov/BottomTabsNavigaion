@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_main"
+            app:startDestination="@id/welcomeFragment">
+
+    <fragment android:id="@+id/welcomeFragment" android:name="com.app.bottomtabsnavigaion.ui.WelcomeFragment"
+              android:label="Welcome" tools:layout="@layout/fragment_welcome">
+        <action android:id="@+id/action_welcomeFragment_to_navigation2" app:destination="@id/navigation2"/>
+    </fragment>
+    <fragment android:id="@+id/navTabsFragment" android:name="com.app.bottomtabsnavigaion.ui.NavTabsFragment"
+              android:label="fragment_nav_tabs" tools:layout="@layout/fragment_nav_tabs">
+        <action android:id="@+id/action_navTabsFragment_to_supportFragment" app:destination="@id/supportFragment"/>
+        <action android:id="@+id/action_navTabsFragment_to_nav_include" app:destination="@id/nav_include"/>
+    </fragment>
+    <navigation android:id="@+id/navigation2" app:startDestination="@id/nav_include">
+        <include app:graph="@navigation/nav_included"/>
+        <action android:id="@+id/action_global_navTabsFragment" app:destination="@id/navTabsFragment"/>
+    </navigation>
+    <fragment android:id="@+id/supportFragment" android:name="com.app.bottomtabsnavigaion.ui.tree.SupportFragment"
+              android:label="fragment_support" tools:layout="@layout/fragment_support"/>
+    <include app:graph="@navigation/nav_included"/>
+</navigation>

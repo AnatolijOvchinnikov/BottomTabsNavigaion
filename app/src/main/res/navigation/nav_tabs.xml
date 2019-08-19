@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_tabs"
+            app:startDestination="@id/tabFirstFragment">
+
+    <fragment android:id="@+id/tabFirstFragment" android:name="com.app.bottomtabsnavigaion.ui.tree.TabFirstFragment"
+              android:label="tab first" tools:layout="@layout/fragment_tab_first">
+        <action android:id="@+id/action_tabFirstFragment_to_tabFirstLowFragment"
+                app:destination="@id/tabFirstLowFragment"/>
+    </fragment>
+    <fragment android:id="@+id/tabSecondFragment" android:name="com.app.bottomtabsnavigaion.ui.tree.TabSecondFragment"
+              android:label="tab second" tools:layout="@layout/fragment_tab_second">
+        <action android:id="@+id/action_tabSecondFragment_to_tabSecondLowFragment"
+                app:destination="@id/tabSecondLowFragment"/>
+    </fragment>
+    <fragment android:id="@+id/tabFirstLowFragment"
+              android:name="com.app.bottomtabsnavigaion.ui.tree.branches.TabFirstLowFragment"
+              android:label="first low" tools:layout="@layout/fragment_tab_first_low">
+        <action android:id="@+id/action_tabFirstLowFragment_to_tabFirstMiddleFragment"
+                app:destination="@id/tabFirstMiddleFragment"
+        />
+    </fragment>
+    <fragment android:id="@+id/tabSecondLowFragment"
+              android:name="com.app.bottomtabsnavigaion.ui.tree.branches.TabSecondLowFragment"
+              android:label="second low" tools:layout="@layout/fragment_tab_second_low">
+        <action android:id="@+id/action_tabSecondLowFragment_to_tabSecondMiddleFragment"
+                app:destination="@id/tabSecondMiddleFragment"/>
+    </fragment>
+    <fragment android:id="@+id/tabFirstMiddleFragment"
+              android:name="com.app.bottomtabsnavigaion.ui.tree.branches.TabFirstMiddleFragment"
+              android:label="first middle" tools:layout="@layout/fragment_tab_first_middle">
+        <action android:id="@+id/action_tabFirstMiddleFragment_to_tabFirstHighFragment"
+                app:destination="@id/tabFirstHighFragment"/>
+    </fragment>
+    <fragment android:id="@+id/tabFirstHighFragment"
+              android:name="com.app.bottomtabsnavigaion.ui.tree.branches.TabFirstHighFragment"
+              android:label="first high" tools:layout="@layout/fragment_tab_first_high"/>
+    <fragment android:id="@+id/tabSecondMiddleFragment"
+              android:name="com.app.bottomtabsnavigaion.ui.tree.branches.TabSecondMiddleFragment"
+              android:label="second middle" tools:layout="@layout/fragment_tab_second_middle">
+        <action android:id="@+id/action_tabSecondMiddleFragment_to_tabSecondHighFragment"
+                app:destination="@id/tabSecondHighFragment"/>
+    </fragment>
+    <fragment android:id="@+id/tabSecondHighFragment"
+              android:name="com.app.bottomtabsnavigaion.ui.tree.branches.TabSecondHighFragment"
+              android:label="second high" tools:layout="@layout/fragment_tab_second_high"/>
+</navigation>
